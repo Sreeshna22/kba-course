@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e949d3c5;
+    }
+
+    header {
+      background-color: #b3a7a7;
+      padding: 10px 20px;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 40px;
+      width: 40px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: white;
+      color: #b3a7a7;
+    }
+
+    .course-container {
+      background-color: #fff;
+      width: 40%;
+      margin: 60px auto;
+      padding: 50px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .course-container img {
+      max-width:70%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 50px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px 10px;
+    }
+
+    .course-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .course-header h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .price-cart {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-blue {
+      background-color: blue;
+      color: white;
+    }
+
+    .btn-green {
+      background-color: green;
+      color: white;
+    }
+
+    .btn-red {
+      background-color: red;
+      color: white;
+    }
+
+    h3 {
+      margin-top: 25px;
+      color: #333;
+    }
+
+    p, ul {
+      font-size: 16px;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .action-buttons {
+      text-align: right;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="image.png" alt="Logo" />
+    <nav>
+      <a href="homepage2.html">Home</a>
+      <a href="contactpage2.html">Contact Us</a>
+      <a href="addcourse2.html">Add Course</a>
+      <a href="signin2.html">sigin n</a>
+    </nav>
+  </header>
+
+  <div class="course-container">
+    <img src="image/learn.jpeg" alt="Course Banner" />
+
+    <div class="course-header">
+      <h2>s122</h2>
+      <div class="price-cart">
+        <h3 style="margin: 0;">Rs.15000</h3>
+        <button class="btn btn-blue">Add to Cart</button>
+      </div>
+    </div>
+
+    <h3>Description</h3>
+    <p>11q</p>
+
+    <h3>Prerequisites</h3>
+    <ul>
+      <li>Basic understanding of blockchain technology</li>
+      <li>Familiarity with programming languages</li>
+      <li>Internet access</li>
+    </ul>
+
+    <h3>Features</h3>
+    <ul>
+      <li>40 hours of content</li>
+      <li>Certificate of completion</li>
+      <li>Access to community forums</li>
+      <li>Downloadable resources</li>
+      <li>24/7 support</li>
+    </ul>
+
+    <div class="action-buttons">
+      <button class="btn btn-green">Edit Course</button>
+      <button class="btn btn-red">Remove</button>
+    </div>
+  </div>
+
+</body>
+</html>
+

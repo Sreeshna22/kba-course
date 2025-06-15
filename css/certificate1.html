@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    .header {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      padding: 10px 10px;
+      background-color: white;
+    }
+
+    .header img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .myclass {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .myclass li {
+      font-size: large;
+      font-weight: 300;
+    }
+
+    .myclass li a {
+      text-decoration: none; 
+      color: black;
+      font-size: large;
+      padding: 8px 12px;
+      display: inline-block;
+    }
+
+    .myclass li a:hover {
+      background-color: blue;
+      color: white;
+      border-radius: 10px;
+      font-size: larger;
+    }
+
+    .container img {
+      display: block;
+      margin: 0 auto;
+      padding-bottom: 10px;
+    }
+
+    .container table {
+      margin: 0 auto;
+      padding: 100px;
+    }
+
+    input[type="text"] {
+      padding: 5px;
+      font-size: 14px;
+    }
+
+    button {
+      padding: 6px 12px;
+      font-size: 14px;
+      color: white;
+      background-color: blue;
+      border: none;
+      border-radius: 4px;
+      
+    }
+
+    button:hover {
+      background-color: darkblue;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="image.png" alt="image" />
+    <nav>
+      <ul class="myclass">
+        <li><a href="certificate2.html">Issue new certificate</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container">
+    <table>
+      <tr>
+        <td colspan="2">
+          <img src="image/image.jpeg" alt="certificate image">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" placeholder="Enter Certificate ID to view" required>
+        </td>
+        <td>
+          <button type="submit"><b>Search</b></button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>

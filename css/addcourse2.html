@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add Course | Learn Blockchain Technology</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      color: black;
+    }
+
+    header {
+      background-color: #eb5deb;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 50px;
+      width: 50px;
+    }
+
+    nav a {
+      color: black;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: white;
+      font-size: larger;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    h1 {
+      color: rgb(88, 84, 88);
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    form {
+      width: 40%;
+      margin: 30px auto;
+      background-color:violet;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 12px;
+      vertical-align: top;
+     
+    }
+   .myclass input[type ="submit"]{
+    background-color: #8f8b8f;
+    padding:10px 4px;
+    border-radius: 4px;
+    font-size: 13px;
+    color:white;
+    
+    
+
+       
+   }
+   .myclass input[type ="reset"]{
+    background-color: #8f8b8f;
+    padding:10px 4px;
+    border-radius:4px;
+    font-size: 13px;
+    color:white;
+   }
+
+    
+
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="image.png" alt="Logo" />
+    <nav>
+      <a href="homepage2.html">Home</a>
+      <a href="contactpage2.html">Contact Us</a>
+      <a href="updatecourse.html">update Course</a>
+      <a href="signin2.html">sigin</a>
+    </nav>
+  </header>
+
+  <h1>Add Course</h1>
+<div class="container">
+
+  <form>
+    <table align="center" width="60%" cellpadding="8">
+      <tr>
+        <td>Course Name:</td>
+        <td><input type="text" placeholder="Enter course name" required style="width: 100%; padding: 8px;"></td>
+      </tr>
+      <tr>
+        <td>Course ID:</td>
+        <td><input type="text" placeholder="Enter course ID" required style="width: 100%; padding: 8px;"></td>
+      </tr>
+      <tr>
+        <td>Course Type:</td>
+        <td>
+          <select name="course_type" required style="width: 100%; padding: 8px;">
+            <option value="">-- Select Course Type --</option>
+            <option value="Hybrid">course1</option>
+            <option value="Remote">course2</option>
+            <option value="Offline">course3</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Description:</td>
+        <td><textarea rows="5" cols="30" placeholder="Enter course description" requiredstyle="width: 400%; padding: 13px;"></textarea></td>
+      </tr>
+      <tr>
+        <td>Price:</td>
+        <td>
+          <select name="price" required style="width: 100%; padding: 8px;">
+            <option value="">-- Select Price --</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="300">300</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Education:</td>
+        <td>
+          <input type="checkbox" value="UG" name="education"> UG
+          <input type="checkbox" value="PG" name="education"> PG
+        </td>
+      </tr>
+      <tr>
+        <td>Gender:</td>
+        <td>
+          <input type="radio" name="Gender" value="Male"> Male
+          <input type="radio" name="Gender" value="Female"> Female
+          <input type="radio" name="Gender" value="Others"> Others
+        </td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td><input type="email" placeholder="Enter your email ID" required style="width: 100%; padding: 8px;"></td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input type="password" placeholder="Enter your password" required style="width: 100%; padding: 8px;"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center" class="myclass">
+          <input type="submit" value="Add Course">
+          <input type="reset" value="Clear">
+        </td>
+      </tr>
+    </table>
+  </form>
+  </div>
+
+</body>
+</html>
+

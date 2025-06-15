@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Example</title>
+  <style>
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      width: 33.33%;
+      padding: 10px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    
+    @media only screen and (max-width: 900px) {
+      .column {
+        width: 100%;
+        font-size: medium;
+        float: left;
+        height: auto;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="row">
+    <div class="column">
+      <img src="image.png" alt="Sample" />
+      <p>This is column 1</p>
+    </div>
+    <div class="column">
+      <img src="image.png" alt="Sample" />
+      <p>This is column 2</p>
+    </div>
+    <div class="column">
+      <img src="image.png" alt="Sample" />
+      <p>This is column 3</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+ body{
+         background-color: rgb(56, 109, 189);
+   }
+   .box{
+    height: 100px;
+    width:500px;
+    border-style: double;
+    margin: 100px 10px;
+    background-color: aliceblue;
+
+   }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Course</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color:white;
+    }
+
+    header {
+      background-color: violet;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    nav a {
+      color: black;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      font-size: large;
+      background-color: #a39c9c;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    .form-container {
+      background-color: rgb(245, 103, 245);
+      width: 40%;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: rgb(87, 82, 87);
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    td {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="image.png" alt="Logo" />
+    <nav>
+      <a href="homepage2.html">Home</a>
+      <a href="addcourse2.html">Add Course</a>
+      <a href="contactpage2.html">Contact</a>
+      <a href="learnmore2.html">Learnmore</a>
+      <a href="login2.html">Login</a>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <h2>Update Course</h2>
+    <form>
+      <table align="center" cellpadding="8">
+        <tr>
+          <td><label for="courseName">Course Name:</label></td>
+          <td><input type="text" id="courseName" name="courseName" placeholder="Enter course name" required style="width: 100%; padding: 8px;"></td>
+        </tr>
+
+        <tr>
+          <td><label for="courseType">Course Type:</label></td>
+          <td>
+            <select id="courseType" name="courseType" required style="width: 100%; padding: 8px;">
+              <option value="">-- Select Type --</option>
+              <option value="Hybrid">Hybrid</option>
+              <option value="Remote">Remote</option>
+              <option value="Offline">Offline</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="description">Description:</label></td>
+          <td><textarea id="description" name="description" rows="4" cols="30" placeholder="Enter course description" required style="width: 100%; padding: 8px;"></textarea></td>
+        </tr>
+
+        <tr>
+          <td><label for="price">Price (Rs):</label></td>
+          <td><input type="number" id="price" name="price" placeholder="Enter price in Rs" required style="width: 100%; padding: 8px;"></td>
+        </tr>
+
+        <tr>
+          <td colspan="2" align="center">
+            <input type="submit" value="Update Course" style="background-color: rgb(97, 89, 97); color: white; padding: 10px 20px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
+</body>
+</html>
+
