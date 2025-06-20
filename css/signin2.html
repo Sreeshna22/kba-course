@@ -1,136 +1,178 @@
 
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: white;
-        }
-        header {
-            background-color: #e90ee9;
-            padding: 10px 20px;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        header img {
-            height: 25px;
-        }
-        nav a {
-            
-            margin-left: 20px;
-            text-decoration: none;
-            color :black;
-            font-size: medium;
-        }
-        nav a:hover {
-           text-decoration: solid;
-            background-color: white;
-            font-size: larger;
-        }
-        
-        
-      
-       
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign In</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-       header img{
-             width:px;
-              height:40px;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: violet;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-        h2{
-            color: rgb(93, 99, 99);
-            padding-bottom:10px 10px;
-            margin-bottom:20px 20px;
-           
-          
-    
-          
-         }
+    header {
+      background-color: #817b81;
+      padding: 10px 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
-      .myclass{
-        
-        background-color:violet;
-            padding:10px 50px;
-            border-radius: 8px;
-             width:30%
+    header img {
+      height: 40px;
+    }
 
-              
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-       
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
 
-      }
-        
-    </style>
+    nav a:hover {
+      background-color: white;
+      color: #a39ea3;
+      font-weight: bold;
+    }
+
+    h2 {
+      color: rgb(93, 99, 99);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 15px;
+    }
+
+    .myclass {
+      background-color: rgb(216, 205, 205);
+      padding: 30px 30px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 350px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      width: 100%;
+      height: 36px;
+      padding: 6px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .submit-btn,
+    .signup-btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn {
+      background-color: #6c63ff;
+      color: white;
+    }
+
+    .submit-btn:hover {
+      background-color: #4b46cc;
+    }
+
+    .signup-btn {
+      background-color: #fff;
+      color: #6c63ff;
+      border: 1px solid #6c63ff;
+    }
+
+    .signup-btn:hover {
+      background-color: #6c63ff;
+      color: white;
+    }
+  </style>
 </head>
-<body bgcolor="violet">
+<body>
 
-    <header>
-        <img src="image.png" alt="Logo" height="50px";weight="50px";>
-        <nav>
-            <a href="homepage2.html">Home</a>
-            <a href="addcourse2.html">Add Course</a>
-            <a href="contactpage2.html">Contact Us</a>
-            <a href="updatecourse.html">update Course</a>
-            <a href="learnmore2.html">Learnmore</a>
-        </nav>
-    </header>
-    
-   <center>
-    <h2>Sign in</h2>
-    <div class="myclass" >
-    <form>
-    <table cellpadding="10"cellspacing="10" bgcolor="violet">
+  <header>
+    <img src="image.png" alt="Logo" />
+    <nav>
+      <a href="homepage2.html">Home</a>
+      <a href="addcourse2.html">Add Course</a>
+      <a href="contactpage2.html">Contact Us</a>
+      <a href="updatecourse.html">Update Course</a>
+      <a href="learnmore2.html">Learn More</a>
+    </nav>
+  </header>
 
+  <div class="form-container">
+    <div class="myclass">
+      <h2>Sign In</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter your name" required />
+        </div>
 
-        <tr>
-            <td>Name</td>
-            <td>
-                <input type="text"name  style="width:200px; height:40px;"name="Name" placeholder="Enter your name"required>
-            </td>
-            <tr>
-                <td>Email</td>
-                <td>
-                    <input type="email"Style="width:200px; height:40px;"name="Email"placeholder="Enter your Email"required>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter your email" required />
+        </div>
 
-                </td>
-                <tr>
-                    <td>Password</td>
-                    <td>
-                        <input type="password"style="width:200px;height:40px;"name="password"placeholder="Enter your password"required>
-                    </td>
-                </tr>
-                
-                    <tr>
-                        <td colspan="2" align="center">
-                            <input type="submit" value="sign in" style="background-color: rgb(155, 155, 165);font-size: larger;">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Enter your password" required />
+        </div>
 
-                        </td>
-                    </tr>
-                </tr>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="number" name="price" id="price" placeholder="Enter course price" required />
+        </div>
 
-            </tr>
+      
+        <button type="button" class="signup-btn" onclick="location.href='signup.html'">Sign Up</button>
+      </form>
+    </div>
+  </div>
 
-            </td>
-        </tr>
-    </table>
-</form>
-</div>
-</center
-
-
-    
 </body>
 </html>

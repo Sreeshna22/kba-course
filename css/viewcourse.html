@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blockchain Programs</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+
+    header {
+      background-color: #fff;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #007bff;
+    }
+
+ 
+    .myclass {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px 100px;
+      justify-content: space-between;
+    }
+
+    .column {
+      width: 100%;
+      max-width: 32%;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .column:hover {
+      transform: translateY(-5px);
+    }
+
+    .column img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: opacity 0.3s ease;
+    }
+
+    .column img:hover {
+      opacity: 0.8;
+    }
+
+    h3 {
+      text-align: center;
+      color: #333;
+      margin: 15px 0 10px;
+    }
+
+    p {
+      color: #444;
+      text-align: justify;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 1000px) {
+      .column {
+        max-width: 48%;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .column {
+        max-width: 100%;
+      }
+
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .myclass {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="image.png" alt="Logo" />
+      </div>
+      <nav class="nav-links">
+        <a href="addcourse2.html">Add Course</a>
+        <a href="contactpage2.html">Contact Us</a>
+        <a href="learnmore2.html">Course</a>
+        <a href="login2.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="myclass">
+    <div class="column">
+      <img src="image/DEB.jpeg" alt="Developer Essential" />
+      <h3>Developer Essential for Blockchain</h3>
+      <p>The course is tailored for individuals with basic programming and web development knowledge. Familiarity with HTML, CSS, JavaScript, and client-server architecture is expected.</p>
+    </div>
+
+    <div class="column">
+      <img src="image/CED.jpeg" alt="Ethereum Developer" />
+      <h3>Developer Program</h3>
+      <p>This self-paced course teaches Ethereum Blockchain fundamentals, smart contracts, and DApps with hands-on exposure to essential tools and frameworks.</p>
+    </div>
+
+    <div class="column">
+      <img src="image/CBA.jpeg" alt="Blockchain Architect" />
+      <h3>Blockchain Architect</h3>
+      <p>Certified architecture developers design scalable software systems. This course validates expertise in turning business needs into robust technical solutions.</p>
+    </div>
+  </div>
+
+</body>
+</html>
