@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+
+<input type="radio" name ="radio"id="good" value="good">good
+<input type="radio" name="radio" id="avg"value ="Average">Average
+<input type="radio" name="radio"id="bad" value="bad">bad
+
+
+
+<button onclick="
+document.getElementById('output').innerHTML =
+   (document.getElementById('good').checked && 'you selected: good')||
+   (document.getElementById('avg').checked && 'you selected: average')||
+   (document.getElementById ('bad').checked &&  'you selected: bad');
+   ">submit</button>
+
+   <p id ="output"></p>
+
+
+</body>
+</html>

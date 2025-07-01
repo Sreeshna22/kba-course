@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="name"></div>
+    <div id ="para"></div>
+    <div id="hai"></div>
+    <div id="output"></div>
+
+    <script>
+        document.write("hai "+ "" + "are"+ "you")
+
+        const element = document.createElement("h1")
+        element.style.color="blue"
+        element.innerHTML ="good morning"
+        const element1 = document.getElementById("name");
+        element1.appendChild(element)
+
+
+        const pelement = document.createElement("p")
+        pelement.style.color="green"
+        pelement.innerHTML = "hai my name is sreeshna"
+        const pelement2 = document.getElementById("para");
+        pelement2.appendChild(pelement)
+
+
+        const p2element=document.createElement("h2")
+        p2element.style.color = "red"
+        p2element.innerHTML="hai welcome to our kerala"
+        const p3element=document.getElementById("hai")
+        p3element.appendChild(p2element)
+
+
+       const lelement = document.createElement("ul");
+        const l1 = document.createElement("li");
+        l1.textContent="apple";
+        const l2 = document.createElement("li");
+        l2.textContent="banana";
+        lelement.appendChild(l2);
+
+        lelement.appendChild(l1);
+        const l3 = document.createElement("li");
+        l3.textContent ="strawberry";
+        lelement.appendChild(l3);
+
+        document.getElementById("output").appendChild(lelement)
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

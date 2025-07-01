@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div id="dropdown2"></div>
+<body>
+    <script>
+     const select = document.createElement("select");
+    
+       const  cake1 =document.createElement("option");
+       cake1.textContent = "vanila"
+       const cake2 = document.createElement("option");
+       cake2.textContent = "choclate"
+       const cake3 = document.createElement("option");
+       cake3.textContent ="mangocake"
+
+       select.appendChild(cake1)
+       select.appendChild(cake2)
+       select.appendChild(cake3)
+
+       document.getElementById("dropdown2").appendChild(select);
+       document.write ("<br> the second option is"+select.options[1].text);
+
+
+
+
+     let str1 = "Hello World";
+     let str2 = "hEllo  world";
+
+     let result= str1  ===  str2;
+
+     let message= "strings are"+ (result == true? "same" : "different");
+
+     document.writeln("<br>"+message +"<br>");
+     document.write ("type of result",typeof result)
+
+
+
+
+
+
+
+     
+
+
+
+       </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -4,166 +4,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YouTube </title>
+  <title>YouTube</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/754de0929d.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-gray-100">
 
 
-  <header class="bg-white shadow-md p-6 flex justify-between items-center">
+  <header class="bg-white shadow-md px-6 py-4 flex justify-between items-center sticky top-0 z-10">
     <div class="flex items-center space-x-3">
       <img src="logonew.png" alt="Logo" class="h-8 w-8">
       <h1 class="text-xl font-bold text-black">YouTube</h1>
     </div>
-    <div class="w-1/2">
-      <input type="text" placeholder="Search" class="w-full px-4 py-2 border border-gray-300 rounded-full">
-    </div>
-    <div class="space-x-4">
-      <button class="bg-gray-200 px-4 py-2 rounded-full">Login</button>
-    </div>
-  </header>
-  
 
-    
-    <div class="flex">
+    <div class="flex items-center space-x-2">
+      <div class="relative w-96">
+        <input
+          type="text"
+          placeholder="Search"
+          class="w-full pl-8 py-2 pr-10 border border-gray-300 rounded-full focus:outline-none"
+        />
+        <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+      </div>
+      <i class="fa-solid fa-microphone text-gray-600 hover:text-black cursor-pointer text-xl"></i>
+    </div>
 
-   
-    <aside class="w-48 bg-white min-h-screen p-6 border-r sticky top-16">
+    <button class="bg-gray-200 px-4 py-2 rounded-full">Login</button>
+  </header> 
+
+
+  <div class="flex">
+
+ 
+    <aside class="w-48 bg-white min-h-screen p-6 border-r">
       <nav class="flex flex-col space-y-4 text-gray-700 text-sm">
-        
-        <a href="" class="flex items-center space-x-3 hover:text-red-600">
-          
-          <p>Home</p>
-        </a>
-
-        <a href="" class="flex items-center space-x-3 hover:text-red-600">
-          
-          <p>Trending</p>
-        </a>
-
-        <a href="" class="flex items-center space-x-3 hover:text-red-600">
-          
-          <p>Subscriptions</p>
-        </a>
-
-        <hr/>
-         <a href="" class="flex items-center space-x-1">
-          
-          <span class="text-gray-400 hover:text-black">Library</span>
-        </a>
-
-        <a href="" class="flex items-center space-x-3 hover:text-red-600">
-         
-          <p>History</p>
-        </a>
-
-        <a href="" class="flex items-center space-x-3 hover:text-red-600">
-          
-          <p>Watch Later</p>
-        </a>
-
-        <a href="" class="flex items-center space-x-3 hover:text-red-600">
-          
-          <p>Purchases</p>
-        </a>
-
-         <a href="" class="flex items-center space-x-3 hover:text-red-600">
-          
-          <p>LDL Cats</p>
-        </a>
-          <a href="" class="flex items-center space-x-3 hover:text-red-600">
-          
-          <p>classic cartoons</p>
-        </a>
-        <hr/>
-        <a href="" class="flex items-center space-x-1">
-          
-          <span class="text-gray-400">Subscriptions</span>
-        </a>
-         <a href="" class="flex items-center space-x-3 hover:text-red-600">
-          
-          <p>music</p>
-        </a>
-         <a href="" class="flex items-center space-x-3 hover:text-red-600">
-          
-          <p>sports</p>
-        </a>
-        <a href="" class="flex items-center space-x-3 hover:text-red-600">
-          
-          <p>gaming</p>
-        </a>
-        <a href="" class="flex items-center space-x-3 hover:text-red-600">
-          
-          <p>movies & shows</p>
-        </a>
-
-        <hr/>
-          <a href="" class="flex items-center space-x-1 hover:text-red-600">
-          
-          <span class="text-gray-400 hover:text-black">More From YouTube</span>
-        </a>
-        
-         </a>
-         <a href="" class="flex items-center space-x-3 hover:text-red-600">
-          
-          <p>YOUTUBE premium</p>
-        </a>
-        <a href="" class="flex items-center space-x-3 hover:text-red-600">
-          
-          <p>Movies & shows</p>
-        </a>
-        <a href="" class="flex items-center space-x-3 hover:text-red-600">
-          
-          <p>movies & shows</p>
-        </a>
-        <a href="" class="flex items-center space-x-3 hover:text-red-600">
-          
-          <p>sports</p>
-        </a>
-        <a href="" class="flex items-center space-x-3 hover:text-red-600">
-          
-          <p>gaming</p>
-        </a>
-      <hr/>
-        
-
-
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-fire"></i> Trending</a>
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-bell"></i> Subscriptions</a>
+        <hr />
+        <a href="#" class="text-gray-400 hover:text-black">Library</a>
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-clock-rotate-left"></i> History</a>
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-clock"></i> Watch Later</a>
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-credit-card"></i> Purchases</a>
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-cat"></i> LDC Cats</a>
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-thumbs-up"></i> Liked Videos</a>
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-clapperboard"></i> Classic Cartoon</a>
+        <hr />
+        <span class="text-gray-400">Subscriptions</span>
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-music"></i> Music</a>
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-trophy"></i> Sports</a>
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-gamepad"></i> Gaming</a>
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-film"></i> Movies & Shows</a>
+        <hr />
+        <span class="text-gray-400 hover:text-black">More From YouTube</span>
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-crown"></i> YouTube Premium</a>
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-headphones"></i> YouTube Music</a>
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-baby"></i> YouTube Kids</a>
+        <a href="#" class="hover:text-red-600"><i class="fa-solid fa-gear"></i> Settings</a>
       </nav>
     </aside>
-    
-   
-     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <img src="study.jpeg" alt="Video Thumbnail" class="w-full m-4 ">
-      <div class="p-4">
-        <h2 class="font-semibold text-sm">my productive day</h2>
-        <p class="text-gray-500 text-xs">sreeshnavlogs · 1B views · 10 years ago</p>
-      </div>
-    </div>
 
-     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <img src="yoga.jpeg" alt="Video Thumbnail" class="w-full m-4 ">
-      <div class="p-4">
-        <h2 class="font-semibold text-sm">Early morning study</h2>
-        <p class="text-gray-500 text-xs">sreeshna vlogs · 1B views · 2 years ago</p>
-      </div>
-    </div>
+  
+    <div class="flex-1">
 
+      <div class="bg-white shadow-sm border-t border-b py-2 overflow-x-auto whitespace-nowrap px-4">
+        <div class="inline-flex space-x-4 text-sm">
+          <button class="bg-black text-white px-4 py-1 rounded-full hover:bg-gray-800">All</button>
+          <button class="bg-gray-200 text-black px-4 py-1 rounded-full hover:bg-gray-300">Aeroplane</button>
+          <button class="bg-gray-200 text-black px-4 py-1 rounded-full hover:bg-gray-300">Live</button>
+          <button class="bg-gray-200 text-black px-4 py-1 rounded-full hover:bg-gray-300">Gaming</button>
+          <button class="bg-gray-200 text-black px-4 py-1 rounded-full hover:bg-gray-300">Music</button>
+          <button class="bg-gray-200 text-black px-4 py-1 rounded-full hover:bg-gray-300">Movies</button>
+          <button class="bg-gray-200 text-black px-4 py-1 rounded-full hover:bg-gray-300">Sports</button>
+          <button class="bg-gray-200 text-black px-4 py-1 rounded-full hover:bg-gray-300">News</button>
+          <button class="bg-gray-200 text-black px-4 py-1 rounded-full hover:bg-gray-300">Cats</button>
+           <button class="bg-gray-200 text-black px-4 py-1 rounded-full hover:bg-gray-300">sktech comedy</button>
+            <button class="bg-gray-200 text-black px-4 py-1 rounded-full hover:bg-gray-300">trucks</button>
+            <button class="bg-gray-200 text-black px-4 py-1 rounded-full hover:bg-gray-300">boats</button>
+        </div>
+      </div>
 
-     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <img src="artifial intelligence.jpeg" alt="Video Thumbnail" class="w-full m-4 ">
-      <div class="p-4">
-        <h2 class="font-semibold text-sm">How I learn AI</h2>
-        <p class="text-gray-500 text-xs">sreeshna vlogs · 1B views · 10 years ago</p>
+      <div class="p-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <iframe src="https://www.youtube.com/embed/H_uc-uQ3Nkc?si=xy-FcLt3lvdMMrNk" class="w-full h-60" allowfullscreen></iframe>
+          <div class="p-4">
+            <h2 class="font-semibold text-sm">My Productive Day</h2>
+            <p class="text-gray-500 text-xs">Sreeshna Vlogs · 1B views · 10 years ago</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <iframe src="https://www.youtube.com/embed/2WlcigNREec?si=Rx8-WvsOfiF5rMM8" class="w-full h-60" allowfullscreen></iframe>
+          <div class="p-4">
+            <h2 class="font-semibold text-sm">My Productive Day</h2>
+            <p class="text-gray-500 text-xs">Sreeshna Vlogs · 1B views · 10 years ago</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <iframe src="https://www.youtube.com/embed/URJWLJjuTTM?si=x3ZnCEXb_zr64vda" class="w-full h-60" allowfullscreen></iframe>
+          <div class="p-4">
+            <h2 class="font-semibold text-sm">Early Morning Study</h2>
+            <p class="text-gray-500 text-xs">Sreeshna Vlogs · 1B views · 2 years ago</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <iframe src="https://www.youtube.com/embed/nVyD6THcvDQ?si=lvyfMhOy-ETGWotx" class="w-full h-60" allowfullscreen></iframe>
+          <div class="p-4">
+            <h2 class="font-semibold text-sm">How I Learn AI</h2>
+            <p class="text-gray-500 text-xs">Sreeshna Vlogs · 1B views · 10 years ago</p>
+          </div>
+        </div>
       </div>
+
     </div>
-     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <img src="food.jpeg" alt="Video Thumbnail" class="w-full m-4 ">
-      <div class="p-4">
-        <h2 class="font-semibold text-sm">cooking a meal</h2>
-        <p class="text-gray-500 text-xs">sreeshna vlog · 1B views · 10 years ago</p>
-      </div>
-    </div>
-    <hr/>
- 
+  </div>
+
 </body>
 </html>

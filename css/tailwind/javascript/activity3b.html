@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // perimeter of circle
+
+    let  radius = 6;
+    if (radius){
+       let perimetercircle = 2 * 3.14 * radius ;
+       document.write(" the perimeter of circle is " + perimetercircle) ;
+    }
+    else {
+        document.write("the is not a number");
+    }
+
+
+    //perimeter of a square
+    let  side = 12;
+    if (side){
+        let perimetersquare = 4 * side;
+        document.write("<br>the perimeter of square is " + perimetersquare);
+    }
+    else{
+        document.write("<br> this is not a number");
+    }
+
+
+
+    //perimeter of rectangle
+    let length = 30;
+    let breadth = 40;
+    if (length && breadth){
+        let  perimeterrectangle =  2 * (length + breadth);
+        document.write( "<br> the perimeter of rectangle is " + perimeterrectangle);
+    }
+
+
+    //perimeter of triangle
+    let  a= 10;
+    let b = 20;
+    let c = 20;
+    if (a && b && c){
+        let perimetertriangle = a + b + c;
+        document.write(" <br>the perimeter of triangle is  "  + perimetertriangle);
+    }
+
+   else{
+    document.write("<br> this is not a number");
+   }
+
+
+// program to find largest among two numbers
+
+
+let  d = 60;
+let  e = 20 ;
+
+if (d >= e){
+    document.write("<br> the largest number is " + d);
+
+}else if (e >= d){
+ document.write("<br> the largest number is " + e);
+}else {
+    document.write("<br> this is not number");
+}
+
+
+// smallest among  three numbers
+ let z= 30;
+ let x = 40;
+ let v = 20;
+
+ if ( z <= x  &&  z <= v){
+    document.write( "<br> the smallest number is " + z)
+
+
+ }else if (x <= z &&  x <= v){
+    document.write( " <br>the smallest number is " +x)
+
+ }else {
+     document.write(" <br>the smallest number is " + v)
+ }
+
+ //Program to check the given number is zero,positive and negative
+  let m = 6;
+   if (m > 0 ){
+    document.write("<br> the number is positive");
+   }else if (m < 0){
+    document.write("<br> the number is negative");
+
+
+   }else{
+    document.write("<br> the number is zero ");
+   }
+
+
+   //persone is eligible for voting
+
+   let age = 17 ;
+   if (age >= 18 ){
+    document.write("<br> the persone is eligible for voting");
+
+   }else{
+    document.write( " <br>the persone is not eligible for voting");
+   }
+
+
+   let age1 = 18
+   let eligible = ( age1 >= 18 ) ? "eligible for vot": "not eligible for vot";
+
+    document.write( "<br>the persone is " + eligible)
+   
+  //program to find root of a quadratic equation
+
+
+  let n = 10;
+  let  l = 20;
+  let  g = 6;
+
+  let discriminant = ( l * l)- (4 * n * g);
+
+  if (discriminant > 0 ){
+     let root1 = (-l + Math.sqrt(discriminant))/(2*n);
+     let root2 =(-l - Math.sqrt(discriminant))/(2*n);
+    document.write("<br> two real roots")
+     document.write("<br> roots :" + root1);
+     document.write("<br>  roots:" + root2);
+
+
+  }else if (discriminant == 0){
+    let root = -l / (2 *  n);
+    document.write("<br> one real and equal roots");
+    document.write(" <br> root :" + root)
+
+  }else{
+    document.write("<br> no real roots ");
+  }
+
+
+
+
+let cgpa = 7 ;
+switch(cgpa){
+    case 7:
+        document.write("<br> you got cgpa 7");
+    break;
+    case 8:
+        document.write(" <br> you got cgpa 8");
+
+    break;
+
+    case 10:
+     document.write(" you got  cgpa 10");
+     break;
+
+     default:
+        document.write("you got invalid cgpa")
+    
+
+
+
+
+}
+
+
+
+
+let monthno = 4
+
+ switch(monthno){
+    case 1:
+        document.write("<br>  month is january");
+    break;
+    case 2:
+    document.write("<br>  month is febuary");
+
+    case 3:
+        document.write("month is march");
+    break;
+
+    case 4:
+        document.write("<br> month is april");
+
+    break;
+
+    case 5:
+
+    document.write("<br> month is may");
+    break;
+
+ }
+
+ //given postive number is multiple of 7 and 3
+
+
+ let number = 7;
+
+    if (number % 3 === 0 &&  number %7 === 0){
+        document.write("<br> the number is  multiple of both 3 and 7");
+
+
+
+    }else if (number %3 === 0 ){
+        document.write( "<br> the number is multiple of 3");
+
+
+    }else if (number % 7 === 0){
+        document.write("<br> the number is multiple of 7");
+    }else{
+        document.write("<br> the number is not multiple of 7 and 3 ")
+    }
+
+// compute sum of integer
+
+
+
+
+let s = 40;
+ let p= 20;
+ let  sum = s + p;
+
+ let result = ( sum >=50 && sum <= 80)? 65 : 80;
+ document.write("<br> sum is" + sum);
+ document .write("<br> result", + result)
+
+//problem last
+
+ let temprature = 35;
+  if (temprature < 0){
+    document.write( "<br> freezing weather");
+
+  }else if (temprature < 10){
+    document.write("<br> very cold weather");
+
+  } else if (temprature < 20){
+    document.write("<br> cold weather");
+
+
+  }else if (temprature < 30 ){
+    document.write("<br> normal in temprature");
+  }else if (temprature < 40){
+    document.write( "<br> its hot");
+  }else if (temprature >= 40){
+    document.write("<br> its very hot");
+
+  }else{
+    document.write("<br> not temprature")
+  }
+
+
+  
+//sign product of two number
+
+let d1 = 10;
+let d2 = 20;
+let d3 = 30;
+
+let product = (d1 * d2 * d3);
+
+if (product < 0){
+  document.write("<br> the number is negative");
+    
+}else if (product > 0){
+  document.write("<br> the number is  positive");
+
+
+}else{
+   doucument.write("<br> the number is zero");
+}
+
+
+
+
+//simple intrest compound intrest
+
+let principle = 2000;
+let rate = 5;
+let time = 2;
+
+let k1 = "simple intrest";
+if (k1 == "simple intrest"){
+  let si = (principle * rate * time)/100;
+  document.write("<br> simple intrest is " + si)
+
+}
+
+let  k2 = "compound intrest";
+if (k2 == "compound intrest"){
+  let amount = principle * (1 + rate/100) * (1 + rate/100);
+
+  let ci = amount - principle
+
+  document.write("<br> the compound intrest is " + ci)
+}
+
+
+
+
+
+
+</script> 
+
+
+
+
+
+    
+</body>
+</html>

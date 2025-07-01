@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = [2,4,6,8,10]
+        let k = 2;
+
+        for (x in a){
+            a[x]=a[x]+2
+
+        }
+
+        document.write("<br> the new array is " +a)
+        let s = 0
+        for (x in a){
+            s = s+a[x]
+
+
+
+        }
+        document.write("<br> the sum of array is:"+s);
+
+        for(x in a){
+            a[x] = k;
+            k =  k +2;
+        }
+        document.write("<br>the array is;",a)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // celsius to fahrenheit
+      let  celsius = 40;
+       if (celsius)  {;
+       let fahrenheit = ( celsius * 9/5)+32;
+       document.write(" in celcius is: " + celsius + "c <br>")
+       document.write ( "in fahrenheit is:" + fahrenheit + "F<br>")
+       }
+       
+
+
+   //swap using temprory variable
+     let a = 20;
+     let b = 30;
+
+     document.write("<br> before swaping : "  + "a =" + a + "&nbsp &nbsp" +"b=" + b);
+
+    
+
+    if (a !== b) {
+      let  temp = a;
+        a  = b
+        b = temp
+
+    
+    
+        document.write(" <br>after swaping: " + "a =" +  a + "&nbsp &nbsp"  +"b =" + b)
+
+    }
+        
+//swap without  temprory variable
+
+let c =  40;
+let d  = 20;
+
+document.write("<br> before  swaping:"+ "c=" + c+  "&nbsp &nbsp" +"d =" + d)
+
+
+if ( c!== d){;
+
+    c = c+d;
+    d = c-d;
+    c = c-d;
+
+
+    document.write( "<br> after swaping:" +  "c = " + c  + "&nbsp &nbsp" + "d = " + d)
+   
+    
+
+}
+
+
+//square of a number
+
+ let  z = 6 ;
+ if  (z) {;
+    let square = z * z ;
+
+    document.write( "<br>the square of a number is:", square );
+
+ }
+ else{;
+    document.write(" this not a number");
+
+ }
+
+
+ // cube of a number
+
+let r = 6;
+
+if (r) {
+    let cube = r * r * r;
+    document.write("<br> the cube of a number is ", +cube);
+
+
+
+}
+else{;
+   document.write ( "<br>this is not a number");
+}
+
+
+// area of circle 
+let radius = 6;
+
+if (radius){
+    let area = 3.14 * radius * radius;
+     document.write(" <br> the area of a circle is ",area);
+}
+ else{
+   document.write ("this is not a number");
+ }
+
+ //area of a square 
+
+ let  s =  12;
+ if (s) {
+    let squarearea = s * s;
+    document.write("<br>the area of square is "+squarearea);
+
+
+ }
+ else{;
+     document.write(" this is not a number");
+ }
+
+ //area of rectangle 
+ let length = 10;
+ let breadth = 20;
+
+ if (length && breadth) {
+    let rectanglearea  = length * breadth;
+    document.write("<br> the area of a  rectangle is "+rectanglearea);
+ }
+ else{
+     document.write(" this is not a number");
+ }
+ 
+
+  
+
+// area of  triangle 
+let base = 20;
+let height = 30;
+ if (base && height){
+    let trianglearea = 1/2* base * height;
+    document.write("<br> the area of triangle is "+ trianglearea)
+ }
+ else{
+    document.write("<br> this is not a number")
+ }
+
+
+
+ 
+
+
+     
+
+    </script>
+</body>
+</html>

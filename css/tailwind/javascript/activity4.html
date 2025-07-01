@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //print natural number 10 to 50 and  find sum average
+        let  i =10;
+        sum = 0
+        count = 0
+        
+        while(i<= 50 ) {
+        document.write("<br>"+ i)
+         sum += i
+         count  ++
+
+            i ++;
+             
+        }
+        let average = sum/count;
+        document.write("<br> the sum is " + sum)
+        document.write(" <br>the average is "+ average)
+
+       //cube of number 10 to 30
+        for(i = 10;i <= 30; i ++ ){
+            let cube = i* i * i;
+          
+        
+         document.write(" <br>cube of"+ i + "is :" + cube +"<br>")
+           
+        }
+        //multiplication table
+
+         num = 3
+        for(i = 1; i <= 10; i ++ ){
+            let multiple =  num * i;
+
+            document.write("<br>"+ num + "*" + i  + "=" + multiple )
+        }
+
+
+
+        // check string palindrom or not  
+
+
+        let str = "madam"
+        let palindrome = true;
+        for ( let i = 0; i < str.length / 2 ; i ++){
+
+        
+        if (str[i] !== str[str.length-1-i]){
+            palindrome = false;
+        }
+
+    }
+
+        if (palindrome){
+            document.write(str +"is a palindrome");
+
+            
+        }else{ 
+            document.write(str +"is  not  a palindrome");
+        }
+
+
+        // 25,30,35,40,45,50
+
+         document.write("<br> the numbers  ")
+        for(i= 25;i<= 50; i += 5){
+            
+            document.write("<br> "+ i)
+        }
+
+//10 ,100,1000,10000
+document.write("the number is")
+for (i=10 ;i<= 10000; i *= 10){
+    document.write("<br>" + i)
+
+}
+
+//8,10,12,14,16,18,20
+document.write("the number is ")
+ for ( i=8 ;i <= 20; i += 2){
+    document.write("<br>"+ i)
+}
+          
+ 
+ //reverse
+
+ 
+
+ 
+
+
+
+
+
+    </script>
+</body>
+</html>

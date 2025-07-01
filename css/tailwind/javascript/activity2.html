@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="output"></div>
+    <div id="about me"></div>
+    <div id="cinemas"></div>
+    <div id="dropdown"></div>
+    <div id="dropdown2"></div>
+<script>
+    const paragraph = document.createElement("p");
+    paragraph.style.color="green"
+    paragraph.textContent="my name is sreeshna R iam a student.";
+    const container = document.getElementById("about me");
+    container.appendChild(paragraph);
+
+
+   
+
+      const ulelement = document.createElement("ul");
+      const li1 = document.createElement("li");
+       li1.textContent = "malayalam cinemas";
+
+       const li2 = document.createElement("li");
+       li2.textContent = "tamil cinemas";
+
+       const li3 = document.createElement("li");
+       li3.textContent = "English cinemas";
+
+
+      ulelement.appendChild(li1);
+      ulelement.appendChild(li2);
+      ulelement.appendChild(li3);
+
+    document.getElementById("output").appendChild(ulelement)
+
+
+
+
+
+    const select = document.createElement("select");
+    const option1 = document.createElement("option");
+    option1.textContent = "python";
+    const option2 = document.createElement("option");
+    option2.textContent="java";
+    const option3 = document.createElement("option");
+    option3.textContent="c++";  
+
+    select.appendChild(option1);
+    select.appendChild(option2);
+    select.appendChild(option3);
+    document.getElementById("dropdown").appendChild(select);
+
+
+   
+
+ 
+  let m1 = " i like to play video games";
+  let m2 = " i don't like hide and seek";
+
+  document.writeln("<br>the new statement is" ,m1.replace("like","i don't like"));
+  document.writeln("<br> the new statement is",m2.replace("don't like", "like"))
+
+
+   const fname = "sreeshna" ;
+   const lname = "r" ;
+   const address = "tvm";
+
+   const FullName = (fname +" " + lname).toUpperCase();
+   const Address = address.toUpperCase();
+
+
+   document.write("<br> my name is "+FullName+ " " +"i live in"+ Address+"" )
+
+
+
+  let fulname = "sreeshna"
+  let lastname = "r"
+
+
+     const firstlastname  = (fulname + " "+ lastname).toUpperCase();
+
+     document.write("<br> my name is "+ firstlastname)
+
+
+
+
+   
+     let para = "you can study anything if you have a  will to do it"
+
+     let p1 = para.slice(0,14);
+     let p2 = para.slice(26,30);
+     let p3 = para.slice(38,47);
+     let p4 = para.slice(47);
+
+     let newpara = p1 +" "+ p2+" " + p3+ "" + p4;
+     document.writeln("<br> the new paragraph is &nbsp &nbsp ",newpara)
+
+
+
+
+     let sentence = "MongoDB is a decentralised distributed ledger  MongoDB can eliminate centralisation"
+
+     document.write("<br> the new sentance is&nbsp ",sentence.replace(/mongodb/gi ,"blockchain"))
+
+
+
+     let newsentence = "mongodb is a decentralised distributed ledger";
+      let part  = newsentence.substring(0,45);
+       document.writeln("<br>",part)
+
+
+
+       let myage  = 20;
+       let brage  = myage+10;
+       let updatedsentance = "i am"+ myage +"yrs old and my brother is 10 yrs older to me. He is now"+brage+"years old"
+
+       document.write("<br> new sentence is ",updatedsentance)
+
+
+
+
+       
+
+
+  
+
+
+</script>
+</body>
+</html> 
