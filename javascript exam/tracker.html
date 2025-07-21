@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>document</title>
+</head>
+<body>        
+
+  <h1>Expense Tracker</h1>
+
+  <label >Description:</label><br>
+  <input type="text" id="desc"><br>
+
+  <label>Amount :</label><br>
+  <input type="text" id="amount"><br>
+
+  <button onclick="addExpense()">Add Expense</button>
+
+  <ul id="expenseList"></ul>   
+
+  <div class="total" id="totalAmount">Total</div>    
+     
+  <script>
+    const expenseList = document.getElementById('expenseList');
+    const totalAmountDisplay = document.getElementById('totalAmount');
+
+    let total = 0;
+
+    function addExpense() {
+      const   descInput = document.getElementById('desc');
+      const    amountInput = document.getElementById('amount');
+      const desc = descInput.value.trim();
+      const amount = parseFloat(amountInput.value);
+
+      if (desc !== '' && !isNaN(amount) && amount > 0) {
+        const li = document.createElement('li');
+      
+
+        const text = document.createElement('span');
+        text.textContent = `${desc} - rs${amount}`;
+
+        const removeBtn = document.createElement('button');
+       removeBtn.textContent = 'Remove';
+        removeBtn.onclick = function () {
+          expenseList.removeChild(li);
+          total -= amount;
+          updateTotal();
+        };          
+
+        li.appendChild(text);
+        li.appendChild(removeBtn);
+        expenseList.appendChild(li);
+
+        total += amount;              
+        updateTotal();
+
+     
+        descInput.value = '';
+        amountInput.value = '';
+      } else {
+        ('Please enter a valid description and amount.');
+      }
+    }
+
+    function updateTotal() {
+      totalAmountDisplay.textContent = `Total: rs${total}`;
+    }
+  </script>
+</body>        
+</html>

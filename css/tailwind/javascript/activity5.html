@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        // 122333
+         //222222222
+         //111223  print
+        for(let i = 1; i <= 3; i++){
+         for(let j = 1; j <= i; j++){
+          document.write(i+"");
+         }
+         document.write("<br>")   
+        }
+        document.write("<br><br>");
+
+
+       for(let i=1; i<=3;i++){
+        for(let j=1 ; j<=i ;j ++){
+           document.write("2")
+        }  
+        document.write("<br>")
+       }
+    
+       document.write("<br><br>")
+       
+
+
+
+       for(let i=1; i<=3 ;i++){
+        for(let j=1;j<=4 - i;j++){
+            document.write(i+ "")
+        }
+        document.write("<br>")
+       }
+       document.write("<br>")
+
+
+       //even numbers upto 20 using array
+
+     even = []
+
+    for(let i = 2;i<=20;i += 2){
+        even.push(i)
+    }
+    document.write("the even numbers" + "<br>"+even )
+
+
+   // concandinate two array a[1,2,3,4] b[5,6,7,8]
+
+   let a = [1,2,3,4];
+   let b = [5,6,7,8];
+   result = [];
+
+   for( let i=0; i< a .length; i++){
+  
+        result.push(a[i]);
+       
+   }
+   for(let i=0; i< b.length; i++){
+   
+      result.push(b[i]);
+   }
+
+     document.write("<br>   two array concatenated  is :" + result.join(""));
+
+
+     //sum of the elements in an array 
+
+
+     let d = [1,2,3,4,5]
+
+     sum = 0
+
+     for ( i= 0; i<d.length; i ++){
+        sum = sum + d[i]
+     }
+      document.write("<br>the sum is " +sum)
+
+  // read array a [20,25,30,35 ,40,45] and divide array two seprate array having equal number of elements
+
+    let z = [20,25,30,35,40,45]
+
+    let first = []
+    let second = []
+
+    let halflength = z.length/2;
+
+    for(let i = 0; i< halflength ; i++){
+       first.push(z[i]);
+    }
+
+    for(let i=halflength ; i< z.length ;i ++){
+    second.push(z[i]);
+    }
+
+    document.write("<br>" +"array is " + z)
+    document.write("<br>" + first)
+    document.write("<br>" + second) 
+
+
+// write a program to check weather the number is  an array and if present print the location 
+
+    let  e = [10,20,30,40,50]
+       let  num = 30
+      foundIndex = -1 ;
+
+      for(let i=0; i<e.length; i++){
+        if  (e[i]== num){
+            foundIndex = i ;
+        }
+       
+      }
+
+      if (foundIndex != -1){
+        document.write(" <br> found at index" +foundIndex);
+
+      } else {
+        document.write("not found");
+      }
+
+   
+ //js program to copy an element in an array to another array
+
+
+       let c = [10,20,30,40] ;    
+       let v = [] ;  
+    
+
+      for(let i=0; i< c.length; i++){
+          v[i] = c[i];
+      }
+       
+       document.write("<br>the copied array is" +v)
+
+ 
+//read array [1,6,7,8,2,3,4,2,2] find occurance of array 2
+
+
+let array = [1,6,7,8,2,3,4,2,2]
+let count = 0
+ for(let i = 0 ;i< array.length; i++){
+  if  (array[i] === 2)
+    count ++
+ }
+
+ document.write("<br> the count of 2 is " + count)
+   
+  </script>

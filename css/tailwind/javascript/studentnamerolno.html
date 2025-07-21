@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+</head>
+<body>
+
+  <label>Name</label>
+  <input type="text" placeholder="Enter your name" id="name" />
+  <br />
+  <button onclick="studentName()">Submit</button>
+  <br />
+
+  <h3>Roll No</h3>
+  <select id="rollNumber" onchange="studentNameshow()">
+    <option value="">select</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+  </select>
+
+  <p id="namerollno"></p>
+
+  <script>
+    let student = [];
+
+    function studentName() {
+      let name = document.getElementById("name").value;
+
+      if (name === "") {
+        document.getElementById("namerollno").textContent = "Enter valid name";
+        return;
+      }
+
+      student.push(name); 
+
+      document.getElementById("namerollno").textContent =
+        "Student added with Roll No: " + student.length;
+
+      document.getElementById("name").value = ""; 
+    }
+
+    function studentNameshow() {
+      let roll = document.getElementById("rollNumber").value;
+      let index = parseInt(roll) - 1;
+
+      if (student[index]) {
+        document.getElementById("namerollno").textContent =
+          "Name: " + student[index];
+      } else {
+        document.getElementById("namerollno").textContent =
+          "No student is found in this roll number";
+      }
+    }
+  </script>
+
+</body>
+</html>

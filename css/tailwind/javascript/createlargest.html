@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <label>enter number</label>
+    <input type="text" placeholder="enter number" id="number">
+   <button onclick="maximumNumber()" >maximum</button>
+   <p id="largest"></p>
+
+   <script>
+    function maximumNumber(){
+        let number = document.getElementById("number").value;
+        let array = number.split(",");
+        let max  = Number(array[0])  
+
+
+        for( let i=1 ; i < array.length; i++){
+            let num = Number (array[i]);
+            if (num >max){
+               max = num;
+            }
+
+        }
+
+        document.getElementById("largest").textContent="the maximum number is "+ max;
+    }
+
+
+
+
+    
+
+
+   </script>
+     
+
+
+
+    
+</body>
+</html>

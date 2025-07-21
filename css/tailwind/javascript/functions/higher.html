@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>higher order function:check browser  console</title>
+</head>
+<body>
+    <script>
+    let numbers = [1,2,3,4,5];
+    let doubled = numbers.map(n=>n*2);
+    console.log(doubled);
+    const squares = numbers.map(function(num){
+           return num * num
+    });
+    console.log(squares);
+
+    let even = numbers.filter(n=> n%2===0);
+    console.log("Even numbers:", even);
+
+
+   let sum = numbers.reduce((total, n) => total + n, 0);
+    console.log('sum is;',sum);
+
+    let array = new Array(5).fill(0);
+    console.log(array);
+
+    for(let i=0;i<array.length;i++){
+    array[i] = i+1;
+}
+    console.log(array);
+
+    </script>
+    
+</body>
+</html>

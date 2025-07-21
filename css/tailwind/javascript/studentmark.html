@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter subject</label>
+    <input type=" text"placeholder="enter subject"id= "subject">
+    <br>
+    <label>enter mark</label>
+    <input type="text"placeholder="enter mark"id="mark">
+    <br>
+    <button onclick="studentGrade()">submit</button>
+    <p id = "grades"></p>
+
+
+
+
+    <script>
+          function studentGrade(){
+        let subject = document.getElementById("subject").value;
+        let mark = document.getElementById("mark").value;
+        let grade = ""
+    
+            if (isNaN(mark) || mark<0 || mark>100){
+                 document.getElementById("grades").textContent="enter valid number"
+                return;
+               
+
+            }
+
+            if (mark> 90){
+                grade = "A+";
+            }else if  (mark>80){
+                grade = "A";
+            
+
+            }else if (mark>70){
+                grade = "B+"
+            }else if (mark>60){
+                grade = "C+";
+            }else{
+                grade = "fail"
+            }
+
+           document.getElementById("grades").textContent= `subject: ${subject}| marK:${mark} |grade:${grade}`;
+         
+
+     
+        }
+
+
+
+        
+    </script>
+
+
+</body>
+</html>

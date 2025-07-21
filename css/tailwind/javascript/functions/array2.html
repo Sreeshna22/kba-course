@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  //       let a1 = [1, 2, 3, 4, 5];
+  // let a2 = [10, 20, 30, 40, 50];
+
+
+  // let sumArray = [];
+
+
+  // for (let i = 0; i < a1.length; i++) {
+  //   sumArray[i] = a1[i] + a2[i];
+  // }
+
+
+  // document.write("Sum of index: " + sumArray.join(", "));
+ let a1 = [1,2,3,4,5];
+ let a2 =[10,20,30,40,50];
+ let sum = [];
+
+ for (let i= 0 ;i < a1.length;i++){
+  sum[i] = a1[i]+ a2[i];
+
+ }
+ document.write( "sum array of index is   " + sum.join(",") );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ let a=[[1,2,3],[4,5,6],[7,8,9]]
+        let b=[[2,4,6],[8,10,12],[14,16,18]]
+        let s=[[],[],[]]
+
+
+        document.write(" length of the arrary is " + a.length)
+        document.write(" the number of rows in first column"+ a[0])
+        if(a.length === b.length){
+          for (i = 0 ;i<a.length;i++){
+            if (a[i].length === b[i].length){
+              for(j=0;j<3;j++){
+                s[i][j] = a[i][j] +b[i][j]
+              }
+            }
+             else{
+              document.write("addition is not possible" )
+            }
+           
+          }
+        
+
+        }
+        else{
+          document.write("addition is not possible")
+
+
+        }
+        document.write(" the sum of array is <br> " )
+
+        for(i=0; i<3 ; i++){
+          for(j=0;j<3;j++){
+            document.write( " " + s[i][j])
+          }
+          document.write("<br>")
+        }
+
+    </script>
+</body>
+</html>

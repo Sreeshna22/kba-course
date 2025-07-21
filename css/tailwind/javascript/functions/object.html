@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript object and functions</title>
+</head>
+<body>
+    <h1> open your console to see the output</h1>
+    <script> 
+       let person = {
+    name: 'sreeshna',
+    age: 18,
+    city: 'tvm',
+
+    greet: function () {
+        console.log('hello, ' + this.name);
+    }
+};
+
+console.log(person.name);   
+console.log(person.age);    
+console.log(person.city);   
+person.greet();             
+
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+
+    input, button {
+      margin: 5px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .expense-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .total {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Expense Tracker</h2>
+
+  <label>Description:</label><br>
+  <input type="text" id="desc"><br>
+
+  <label>Amount (₹):</label><br>
+  <input type="number" id="amount"><br>
+
+  <button onclick="addExpense()">Add Expense</button>
+
+  <ul id="expenseList"></ul>
+
+  <p class="total" id="totalDisplay">Total: ₹0</p>
+
+  <script>
+    let expenses = [];
+    let total = 0;
+
+    const descInput = document.getElementById('desc');
+    const amountInput = document.getElementById('amount');
+    const expenseList = document.getElementById('expenseList');
+    const totalDisplay = document.getElementById('totalDisplay');
+
+    function addExpense() {
+      const desc = descInput.value.trim();
+      const amount = parseFloat(amountInput.value);
+
+      if (desc === '' || isNaN(amount) || amount <= 0) {
+        alert('Please enter valid description and amount.');
+        return;
+      }
+
+      const expense = {
+        id: Date.now(), // unique ID
+        description: desc,
+        amount: amount
+      };
+
+      expenses.push(expense);
+      renderExpenses();
+      clearInputs();
+    }
+
+    function renderExpenses() {
+      expenseList.innerHTML = '';
+      total = 0;
+
+      expenses.forEach((exp) => {
+        const li = document.createElement('li');
+        li.className = 'expense-item';
+
+        const text = document.createElement('span');
+        text.textContent = `${exp.description} - ₹${exp.amount.toFixed(2)}`;
+
+        const updateBtn = document.createElement('button');
+        updateBtn.textContent = 'Update';
+        updateBtn.onclick = () => updateExpense(exp.id);
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'Delete';
+        deleteBtn.onclick = () => deleteExpense(exp.id);
+
+        const btnGroup = document.createElement('span');
+        btnGroup.appendChild(updateBtn);
+        btnGroup.appendChild(deleteBtn);
+
+        li.appendChild(text);
+        li.appendChild(btnGroup);
+        expenseList.appendChild(li);
+
+        total += exp.amount;
+      });
+
+      totalDisplay.textContent = `Total: ₹${total.toFixed(2)}`;
+    }
+
+    function updateExpense(id) {
+      const expense = expenses.find(e => e.id === id);
+      const newDesc = prompt("Enter new description:", expense.description);
+      const newAmount = parseFloat(prompt("Enter new amount:", expense.amount));
+
+      if (newDesc && !isNaN(newAmount) && newAmount > 0) {
+        expense.description = newDesc.trim();
+        expense.amount = newAmount;
+        renderExpenses();
+      } else {
+        alert("Invalid input for update.");
+      }
+    }
+
+    function deleteExpense(id) {
+      expenses = expenses.filter(e => e.id !== id);
+      renderExpenses();
+    }
+
+    function clearInputs() {
+      descInput.value = '';
+      amountInput.value = '';
+    }
+  </script>
+
+</body>
+</html>

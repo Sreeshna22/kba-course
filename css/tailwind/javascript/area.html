@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>enter sides of square</label>
+    <input type=" text"placeholder="square sides" id="areasquare">
+    <button onclick="areaSquare()">square area</button>
+    <p id="square"> </p>
+ </label>
+
+
+ 
+    <label>length of rectangle</label>
+    <input type="text" placeholder="enter length"id="length">
+
+    <label>breadth of rectangle</label>
+    <input type="text" placeholder="enter breadth"id="breadth">
+    <button onclick="areaRectangle()">area Rectangle</button>
+    <p id="Rectangle"></p>
+
+
+    <label>radius of circle</label>
+    <input type="text" placeholder="enter radius"id="radius">
+    <button onclick="areaCircle()">circle area</button>
+    <p id="circle"></p>
+
+    </label>
+
+
+
+    <script>
+      function areaSquare(){
+        let side = document.getElementById("areasquare").value;
+        let area = side * side;
+        document.getElementById("square").textContent="area of square is "+area
+      }
+
+
+      function areaRectangle() {
+        let length = document.getElementById("length").value;
+        let breadth = document.getElementById("breadth").value;
+        let area = length * breadth;
+        document.getElementById("Rectangle").textContent="area of rectangle is a "+ area
+
+      }
+
+      function areaCircle(){
+        let radius = document.getElementById("radius").value
+        let area = 3.14 * radius * radius;
+        document.getElementById("circle").textContent="area of circle is "+ area
+
+      }
+    </script>
+</body>
+</html>

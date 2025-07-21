@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label> First number</label>
+    <input type="text" placeholder=" Enter your first number" id="num1">
+    <br>
+    <label>second number</label>
+    <input type="text"placeholder="enter your second number" id="num2">
+    <br>
+
+ <button onclick="compareNumbers()">compare</button>
+ <p id="result"></p>
+   <script>
+    function compareNumbers(){
+    let num1 =    document.getElementById("num1").value;
+     let num2 =   document.getElementById("num2").value;
+          num1 = parseInt(num1);
+          num2 = parseInt(num2);
+
+
+         if ( isNaN (num1)|| isNaN(num2)){
+          document.getElementById("result").textContent="enter valid number";
+         }
+
+        else if  (num1 >num2){
+           document.getElementById("result").textContent="firstnumber is greater than second number";
+
+        }
+        else if(num1<num2) {
+            document.getElementById("result").textContent="second number is greater than first number";
+
+        }
+        else if(num1===num2){
+            document.getElementById("result").textContent="both numbers are equal";
+        }
+
+         else
+         document.getElementById('result').textContent=" invalid number"
+    }
+
+
+
+
+   </script> 
+</body>
+</html>

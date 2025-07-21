@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Shopping Cart</title>
+</head>
+<body>
+  <h2>Shopping Cart</h2>
+  <button onclick="shoppingCartExample()">Calculate Total</button>
+
+  <div id="totalcost"></div>
+  <div id="cartsize"></div>
+  <div id ="cartdetails"></div>
+
+  <script>
+    function shoppingCartExample() {
+      const shoppingCart = new Map();
+      shoppingCart.set("apple", 2);
+      shoppingCart.set("orange", 5);
+      shoppingCart.set("banana", 1);
+
+      const prices = {
+        'apple': 80,
+        'orange': 50,
+        'banana': 70  
+      };
+       
+      let totalCost = 0; 
+     let cartDetails = '';
+      
+      shoppingCart.forEach((quantity, item) => {
+        totalCost += prices[item] * quantity; 
+        cartDetails += item + "(" + quantity + "," + prices[item]  + ")<br>";
+      });
+
+
+      document.getElementById('cartdetails').innerHTML = cartDetails
+      document.getElementById('totalcost').innerHTML = 'Total cost: ' + totalCost;
+      document.getElementById('cartsize').innerHTML = 'Number of items: ' + shoppingCart.size;
+
+
+
+
+
+
+
+    }
+  </script>
+</body>
+</html>

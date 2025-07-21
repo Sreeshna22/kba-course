@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //js program to read an array and sort in accending and decenting order
+
+    let a= [20,40,10,40,50]
+
+    for (let i= 0; i<a.length; i++){
+     for(let j= i+1;j<a.length; j++){
+
+        if (a[i] > a[j]){
+         let temp = a[i];
+            a[i] = a[j];
+             a[j]= temp;
+        }
+ 
+     }
+
+    }
+    document.write("he ascending order" + a);
+
+
+
+
+for(let i = 0;i<a.length;i++){
+for (let j = i+1; j<a.length;j++){
+
+
+ if (a[i]< a[j]){
+    let temp = a[i];
+    a[i] = a[j];
+     a[j] = temp;
+ }
+
+}
+
+}
+ document.write(" <br>the desending order is " + a)
+  
+// js program to remove an element present in a specific location
+ let array = [20,21,30,42,50]
+ let position = 3 
+ document.write("<br>the array is" + array)
+
+ if (position >= 0 &&  position< array.length ){
+    for( let i=position ;i<array.length-1;i++){
+        array[i]=array[i +1]
+    }
+        array.length = array.length-1
+
+        
+    document.write("<br>the removed position is" + position )
+    document.write("<br>the updated array is " + array)
+    }else{
+    document.write("its not number")
+ }
+
+
+
+
+    </script>
+</body>
+</html>

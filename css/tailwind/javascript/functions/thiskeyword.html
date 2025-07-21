@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> check the browser console for output</h1>
+    <button onclick="showAlert()"> showAlert</button>
+    <script>
+ console.log (this);//global window object
+  function  showthis(){
+    console.log(this);
+  }
+  showthis();//window object
+
+  let person = {
+    name : 'ram',
+    greet:function(){
+        console.log('hello'+ this.name);
+
+    }
+  }
+
+  person.greet();// hello ram
+
+  let arrowGreet = ()=>{
+    console.log('arrow function this context is :', this );
+
+  }
+  arrowGreet(); //window object
+
+  function showAlert(){
+    window.alert("hello  from window object");
+  }
+  //immediatly invoked function expression
+
+
+  (function(){
+    console.log('function is immediatly exceuted')
+
+  })();
+   (function(){})();
+
+  
+  
+    </script>
+</body>
+</html>
