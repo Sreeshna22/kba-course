@@ -13,7 +13,7 @@ admin.post('/addMovie', authenticate, admincheck, async (req, res) => {
     if (existingMovie) {
       return res.status(400).json({ msg: 'Movie already exists' });
     }
-
+             
     const newMovie = new Movie({ movieTitle, movieType, releaseDate, review });
     await newMovie.save();
 
