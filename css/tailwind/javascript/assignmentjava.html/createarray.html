@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter elements</label>
+    <input type = "text" placeholder="enter array"id=arrayelement>
+    <button  onclick="elementArray()">submit </button>
+    <p id="input"></p>
+
+
+
+    <script>
+          let array = [];
+
+        function elementArray(){
+
+        let value = document.getElementById("arrayelement").value;
+
+        if (array === ""){
+            return;
+
+            
+        }
+         array.push(value)
+         document.getElementById("arrayelement").value="";
+         document.getElementById("input").textContent = "Entered array is:"+array.join(",");
+    }
+    </script>
+</body>
+</html>

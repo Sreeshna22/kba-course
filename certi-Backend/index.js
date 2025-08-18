@@ -6,43 +6,26 @@ import { authenticate } from "./Middleware/auth.js";
 
 import admincheck from './Middleware/admin.js';
 
-import { user } from './Routes/userRoute.js';
+import { user } from './Routes/userRoute.js';    
+
+                   
 
 
 
-
-dotenv.config()
+dotenv.config()     
 
 
 const app = express();
  app.use(json())
-
+app.use('/user', user);                 
 app.use('/',router)
-app.use('/user',user)
 app.use('/', authenticate, admincheck, admin); 
-app.use('/', user);
+app.use('/',user)
 app.use('/admin', admin);
 
 
 
 
-app.get('/',(req,res)=>{
-    console.log("hello world");
-    res.send("hello world");
-
-})
-
-app.get('/hai',(req,res)=>{
-    console.log("hai world");
-    res.send("hai world");
-
-})
-
-app.post("/getData",(req,res)=>{
-      console.log("hello world");
-      res.send("hello world");
-
-})
 
 app.listen(process.env.PORT,()=>{
     console.log(`server is listening to the port ${process.env.PORT}`)

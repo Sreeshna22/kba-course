@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <label>Enter name</label> 
+   <input type="text" id="name"placeholder="enter your name">
+  <br>
+   <label>enter mark</label>
+   <input type= "text" id ="mark" placeholder="enter your mark">
+<br>
+
+   <button onclick="studentGrade()">submit</button>
+   <p id = "result"></p>
+
+   <button onclick="averageGrade()">class average</button>
+   <p id="averageresult"></p>
+
+
+<script>
+
+
+const student = [{name:"david",mark:80},
+               {name:"Vinoth",mark:77},
+               {name:"Divya",mark:88},
+               {name:"Ishitha",mark:95},
+               {name:"Thomas",mark:68}
+];
+    function studentGrade() {
+         const name = document.getElementById('name').value.trim()
+     const mark = document.getElementById('mark').value;
+
+
+     if (name === ""|| isNaN(mark )|| mark<0 || mark>100){
+        document.getElementById("result").textContent="enter valid mark";
+        return;
+     }
+     let grade = ""
+
+     if (mark>90){
+        grade="A+"
+     }
+
+     else if (mark>80){
+        grade=":A"
+     }
+     else if (mark>70){
+        grade= "B+"
+     }
+     else if (mark>60){
+        grade="c+"
+        
+     }else{
+
+     grade = "fail";
+    
+    }
+   
+     
+document.getElementById("result").textContent =  `${name} and   marks ${mark} grade is ${grade}`;  
+    }
+
+    
+    function averageGrade(){
+
+        let total = 0
+        for(i=0;i<student.length;i++){
+            total += student[i].mark
+
+        }
+
+        const average = total/student.length;
+        document.getElementById("averageresult").textContent= "class average is :"+ average.toFixed(2)
+    }
+     
+
+    
+
+
+        
+    
+</script>
+</body>
+</html>
