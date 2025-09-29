@@ -9,7 +9,7 @@ admin.post('/addMovie', authenticate, admincheck, async (req, res) => {
   try {
     const { movieTitle, movieType, releaseDate, review } = req.body;
 
-    const existingMovie = await Movie.findOne({ movieTitle }); 
+    const existingMovie = await Movie.findOne({ movieTitle });         
     if (existingMovie) {
       return res.status(400).json({ msg: 'Movie already exists' });
     }
@@ -74,3 +74,4 @@ admin.delete('/deleteMovie', authenticate, admincheck, async (req, res) => {
 });
 
 export { admin };
+ 
