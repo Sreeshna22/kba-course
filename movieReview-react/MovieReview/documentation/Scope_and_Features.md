@@ -1,29 +1,33 @@
-Project Scope
+Project Scope🚀
 
-The project aims to build a full-stack  movie review system where:
+💡 The project aims to build a full-stack  movie review system where:
 
-Users can create accounts, log in, and   add review  and rate the movies.
+💡 Users can create accounts, log in, and   add review  and rate the movies.
 
-Admins can manage movies, monitor reviews, and gather feedback.
+💡  Admins can manage movies, monitor reviews, and gather feedback.
 
-Key Features
+💡 Key Features
 
-For Users:
+📌 For Users:
 
-Sign up / Login / Logout
+🌱 Sign up / Login / Logout
 
-View movie listings and average ratings
+🌱 View movie listings and average ratings
 
-Add, edit, or delete personal reviews
+🌱 Add, edit, or delete personal reviews
 
-View other users’ reviews
+🌱 View other users’ reviews and ratings
 
-Add feedback about the website
+🌱 Check the average rating along with the number of reviews for each movie.
 
-For Admins:
+🌱  Add feedback about the website
 
-Add new movies with details and images
+📌 For Admins:
 
-Edit and delete movies
+🌱 Sign up / Login / Logout
 
-View and manage all user reviews and feedback
+🌱 Add new movies with details and images
+
+🌱 Edit and delete movies
+
+🌱  View and manage all user reviews and feedback

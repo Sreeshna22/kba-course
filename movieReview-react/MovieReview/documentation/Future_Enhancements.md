@@ -1,9 +1,9 @@
-Implement role-based access with advanced analytics (for admin).
+💫 Implement role-based access with advanced analytics (for admin).
 
-Add AI-based sentiment analysis for reviews.
+💫 Add AI-based sentiment analysis for reviews.
 
-Enable social login (Google, GitHub).
+💫 Enable social login (Google, GitHub).
 
-Deploy on cloud (AWS/GCP).
+💫 Deploy on cloud (AWS/GCP).
 
-Add email notifications for new reviews or feedback.
+💫 Add email notifications for new reviews or feedback.
