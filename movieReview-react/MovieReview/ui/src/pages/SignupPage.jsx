@@ -1,8 +1,7 @@
 
-
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import sImage from "../assets/images/s.png";
 
 export default function SignupPage() {
   const [firstName, setFirstName] = useState('');
@@ -17,18 +16,21 @@ export default function SignupPage() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/signup', {
-        method: 'POST',
-        credentials: 'include',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          FirstName: firstName,
-          LastName: lastName,
-          UserName: username,
-          Password: password,
-          UserRole: userRole,
-        }),
-      });
+      
+      
+      const response = await fetch("/api/auth/signup", {
+  method: "POST",
+  credentials: "include",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    FirstName: firstName,
+    LastName: lastName,
+    UserName: username,
+    Password: password,
+    UserRole: userRole,
+  }),
+});
+
 
       if (!response.ok) {
         const errData = await response.json();
@@ -42,84 +44,90 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="bg-white flex items-center justify-center min-h-screen">
-      <div className="bg-gray-800 p-8 rounded-lg shadow-md w-full max-w-md text-white">
-        <h2 className="text-2xl font-bold mb-6 text-center">Create Your Account</h2>
+    <div className="bg-black text-white flex items-center justify-center min-h-screen">
+      <div className="border border-red-500 p-10 max-w-5xl w-full">
+        <div className="flex items-center justify-between">
 
-        {error && <p className="text-red-500 mb-4 text-center">{error}</p>}
-
-        <form onSubmit={handleSignup} className="space-y-4">
-
-          <div>
-            <label className="block mb-1 text-sm">First Name</label>
-            <input
-              type="text"
-              className="w-full p-2 rounded bg-gray-700 border border-gray-600 text-white"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              required
-            />
+        
+          <div className="w-1/2 flex justify-center">
+            <img src={sImage} alt="Left Side" className="rounded shadow-lg max-h-80" />
           </div>
 
-          <div>
-            <label className="block mb-1 text-sm">Last Name</label>
-            <input
-              type="text"
-              className="w-full p-2 rounded bg-gray-700 border border-gray-600 text-white"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              required
-            />
+         
+          <div className="w-px h-80 bg-red-500 mx-6"></div>
+
+         
+          <div className="w-1/2">
+            <h2 className="text-2xl font-bold mb-6">Create Your Account</h2>
+
+            {error && <p className="text-red-500 mb-4">{error}</p>}
+
+            <form onSubmit={handleSignup}>
+              <label htmlFor="firstName" className="block mb-1 text-sm text-white">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                placeholder="Enter your first name"
+                className="bg-black border border-red-500 w-full mb-4 p-2 rounded text-white placeholder-red-400"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+              />
+
+              <label htmlFor="lastName" className="block mb-1 text-sm text-white">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                placeholder="Enter your last name"
+                className="bg-black border border-red-500 w-full mb-4 p-2 rounded text-white placeholder-red-400"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                required
+              />
+
+              <label htmlFor="username" className="block mb-1 text-sm text-white">Username</label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter your username"
+                className="bg-black border border-red-500 w-full mb-4 p-2 rounded text-white placeholder-red-400"
+                value={username}
+                onChange={(e) => setUserName(e.target.value)}
+                required
+              />
+
+              <label htmlFor="password" className="block mb-1 text-sm text-white">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                className="bg-black border border-red-500 w-full mb-4 p-2 rounded text-white placeholder-red-400"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+
+              <label htmlFor="role" className="block mb-1 text-sm text-white">Role</label>
+              <select
+                id="role"
+                value={userRole}
+                onChange={(e) => setUserRole(e.target.value)}
+                className="bg-black border border-red-500 w-full mb-6 p-2 rounded text-white"
+              >
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+              </select>
+
+              <button
+                type="submit"
+                className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 w-full block text-center mb-4"
+              >
+                Sign Up
+              </button>
+            </form>
+
           </div>
-
-          <div>
-            <label className="block mb-1 text-sm">Username</label>
-            <input
-              type="text"
-              className="w-full p-2 rounded bg-gray-700 border border-gray-600 text-white"
-              value={username}
-              onChange={(e) => setUserName(e.target.value)}
-              required
-            />
-          </div>
-
-          <div>
-            <label className="block mb-1 text-sm">Password</label>
-            <input
-              type="password"
-              className="w-full p-2 rounded bg-gray-700 border border-gray-600 text-white"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-
-          <div>
-            <label className="block mb-1 text-sm">Role</label>
-            <select
-              className="w-full p-2 rounded bg-gray-700 border border-gray-600 text-white"
-              value={userRole}
-              onChange={(e) => setUserRole(e.target.value)}
-            >
-              <option value="admin">Admin</option>
-              <option value="user">User</option>
-            </select>
-          </div>
-
-          <button
-            type="submit"
-            className="w-full bg-red-500 hover:bg-red-600 p-2 rounded font-semibold"
-          >
-            Sign Up
-          </button>
-        </form>
-
-        <p className="mt-4 text-center text-sm">
-          Already have an account?{" "}
-          <a href="/login" className="text-red-400 hover:underline">
-            Login
-          </a>
-        </p>
+        </div>
       </div>
     </div>
   );

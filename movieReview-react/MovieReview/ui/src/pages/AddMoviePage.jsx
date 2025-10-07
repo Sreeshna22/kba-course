@@ -1,115 +1,158 @@
 
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar2";
 
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
-const AddMoviePage = () => {    
-  const [movie, setMovie] = useState({
+export default function AddMoviePage() {
+  const [form, setForm] = useState({
     MovieTitle: "",
+    Genre: "",
     ReleaseYear: "",
-    Type: "",
-    PosterFile: null,
+    BoxOfficeCollection: "",
+    Synopsis: "",
   });
+  const [file, setFile] = useState(null);
 
-  const navigate = useNavigate();   
-
-  const handleChange = (e) => setMovie({ ...movie, [e.target.name]: e.target.value });
-  const handleFileChange = (e) => setMovie({ ...movie, PosterFile: e.target.files[0] });
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!movie.PosterFile) return alert("Poster is required");
-
-    const formData = new FormData();
-    formData.append("MovieTitle", movie.MovieTitle);
-    formData.append("ReleaseYear", movie.ReleaseYear);
-    formData.append("Type", movie.Type);
-    formData.append("Poster", movie.PosterFile);
 
     try {
-      const res = await fetch("/api/admin/addMovie", {
-        method: "POST",
-        body: formData,
-        credentials: "include",                      
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.msg || "Error adding movie");
+      const data = new FormData();
+      Object.entries(form).forEach(([key, value]) => data.append(key, value));
+      if (file) data.append("MovieImage", file);
 
-      alert(`Movie "${data.newMovie.MovieTitle}" added!`);
-      setMovie({ MovieTitle: "", ReleaseYear: "", Type: "", PosterFile: null });
-      navigate("/movies");          
+      
+       const res = await fetch("/api/admin/addMovie", {
+        method: "POST",
+        credentials: "include",
+        body: data,
+      });
+
+      const result = await res.json();
+
+      if (res.ok) {
+        alert(" " + result.msg);
+        setForm({
+          MovieTitle: "",
+          Genre: "",
+          ReleaseYear: "",
+          BoxOfficeCollection: "",
+          Synopsis: "",
+        });
+        setFile(null);
+      } else {
+        alert(" " + result.msg);
+      }
     } catch (err) {
-      alert(err.message);
+      alert(" Error: " + err.message);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-xl shadow-lg w-full max-w-md p-8">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Add Movie</h2>
-        <form onSubmit={handleSubmit} className="space-y-5">
+    <div className="bg-black text-white min-h-screen">
+      <Navbar title="Add New Movie" backLink="/admin/dashboard" />
+
+      <div className="max-w-2xl mx-auto mt-10 bg-gray-900 p-6 rounded-lg shadow-lg">
+        <form onSubmit={handleSubmit} className="space-y-4">
+          
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Movie Title</label>
+            <label className="block text-sm mb-1">Movie Title</label>
             <input
               type="text"
               name="MovieTitle"
-              placeholder="Enter movie title" 
-              onChange={handleChange} 
-              value={movie.MovieTitle}
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 "
+              value={form.MovieTitle}
+              onChange={handleChange}
+              className="w-full p-2 rounded bg-black text-white border border-red-600"
+              placeholder="Enter movie title"
               required
             />
           </div>
 
+          
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Release Year</label>
+            <label className="block text-sm mb-1">Genre</label>
             <input
               type="text"
+              name="Genre"
+              value={form.Genre}
+              onChange={handleChange}
+              className="w-full p-2 rounded bg-black text-white border border-red-600"
+              placeholder="Enter Genre"
+            />
+          </div>
+
+          
+          <div>
+            <label className="block text-sm mb-1">Release Year</label>
+            <input
+              type="date"
               name="ReleaseYear"
-              placeholder="Enter release year"
+              value={form.ReleaseYear}
               onChange={handleChange}
-              value={movie.ReleaseYear}
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 "
-              required
+              className="w-full p-2 rounded bg-black text-white border border-red-600"
             />
           </div>
 
+          
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Type</label>
+            <label className="block text-sm mb-1">Box Office Collection (USD)</label>
             <input
-              type="text"
-              name="Type"
-              placeholder="Action, Drama, Comedy..."
+              type="number"
+              name="BoxOfficeCollection"
+              value={form.BoxOfficeCollection}
               onChange={handleChange}
-              value={movie.Type}
-              className="w-full border border-gray-300 rounded-lg px-4 py-2 "
-              required
+              className="w-full p-2 rounded bg-black text-white border border-red-600"
+              placeholder="Enter box office collection"
             />
           </div>
 
+          
           <div>
-            <label className="block text-gray-700 font-medium mb-2">Poster</label>
+            <label className="block text-sm mb-1">Synopsis</label>
+            <textarea
+              rows="3"
+              name="Synopsis"
+              value={form.Synopsis}
+              onChange={handleChange}
+              className="w-full p-2 rounded bg-black text-white border border-red-600"
+              placeholder="Brief movie description..."
+            />
+          </div>
+
+          
+          <div>
+            <label className="block text-sm mb-1">Upload Poster</label>
             <input
               type="file"
-              name="Poster"
               accept="image/*"
-              onChange={handleFileChange}
-              className="w-full text-gray-700"
-              required
+              onChange={(e) => setFile(e.target.files[0])}
+              className="w-full p-2 bg-black text-white border border-red-600 rounded"
             />
           </div>
 
-          <button
-            type="submit"
-            className="w-full bg-red-600 text-white font-semibold px-4 py-2 rounded-lg  "
-          >
-            Add Movie
-          </button>
+          
+          <div className="flex justify-between mt-6">
+            <button
+              type="submit"
+              className="bg-red-600 hover:bg-red-700 px-6 py-2 rounded text-white font-semibold"
+            >
+              Submit
+            </button>
+
+            <Link
+              to="/admin/MovieList"
+              className="bg-gray-700 hover:bg-gray-800 px-6 py-2 rounded text-white font-semibold"
+            >
+              Cancel / View All Movies
+            </Link>
+          </div>
         </form>
       </div>
     </div>
   );
-};
-
-export default AddMoviePage;
+}
 

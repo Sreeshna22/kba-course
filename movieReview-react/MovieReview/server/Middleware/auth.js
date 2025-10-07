@@ -1,36 +1,29 @@
 
-
-
-import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
-
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
 dotenv.config();
-
-
-
 
 const authenticate = (req, res, next) => {
   const cookieHeader = req.headers.cookie;
-  if (!cookieHeader) return res.status(401).send("Unauthorized access");
+  if (!cookieHeader) return res.status(401).json({ msg: "Unauthorized access" });
 
-  const token = cookieHeader
+  const cookie = cookieHeader
     .split(";")
-    .map(c => c.trim())
-    .find(c => c.startsWith("authToken="))
-    ?.split("=")[1];
+    .find((c) => c.trim().startsWith("authToken="));
+  if (!cookie) return res.status(401).json({ msg: "Unauthorized access" });
 
-  if (!token) return res.status(401).send("Unauthorized access");
+  const token = cookie.split("=")[1];
 
   try {
     const verified = jwt.verify(token, process.env.SECRET_KEY);
     req.user = {
-      id: verified._id,
+      _id: verified.id,
       userName: verified.userName,
-      role: verified.userRole 
+      userRole: verified.userRole,
     };
     next();
   } catch (err) {
-    return res.status(401).send("Unauthorized access");
+    return res.status(401).json({ msg: "Invalid token" });
   }
 };
 
