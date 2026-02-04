@@ -3,7 +3,7 @@ import { Blog } from "../Models/Blog.js";
 
 const router = express.Router();
 
-// ➕ Create Blog
+
 router.post("/add", async (req, res) => {
   try {
     const blog = new Blog(req.body);
@@ -14,13 +14,13 @@ router.post("/add", async (req, res) => {
   }
 });
 
-// 📖 Get All Blogs
+
 router.get("/", async (req, res) => {
   const blogs = await Blog.find();
   res.json(blogs);
 });
 
-// 📖 Get One Blog by ID
+
 router.get("/:id", async (req, res) => {
   try {
     const blog = await Blog.findById(req.params.id);
@@ -31,7 +31,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// 📝 Update Blog
+
 router.put("/:id", async (req, res) => {
   try {
     const updatedBlog = await Blog.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -42,7 +42,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// ❌ Delete Blog
+
 router.delete("/:id", async (req, res) => {
   try {
     const deletedBlog = await Blog.findByIdAndDelete(req.params.id);
